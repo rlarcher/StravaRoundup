@@ -1,0 +1,13 @@
+{
+    "name": "StravaRoundup",
+    "version": "0.1",
+    "manifest_version": 2,
+    "description": "Round up your runs on Strava to the full mileage",
+    "homepage_url": "http://localhost:3000",
+    "content_scripts": [{
+        "run_at": "document_end",
+        "matches": ["http://*.strava.com/*", "https://*.strava.com/*"],
+        "js": ["roundUp.js"]
+    }],
+    "permissions": ["http://strava.com/*", "https://strava.com/*"]
+}
